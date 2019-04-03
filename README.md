@@ -1,1 +1,1 @@
-websocket_ui
+Web Socket Ui

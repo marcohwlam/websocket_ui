@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Websocket</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Connect</a></li>
+							<li><a href="#two" id='message_area'>Messages</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Web Socket Client</h1>
+							<p>Just a fine responsive app for testing websocket.</p>
+							<p>Remember have your server running</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Start</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<div class="content">
+								<table>
+				            <tr>
+				                <td width="200px">WS Protocol</td>
+				                <td>
+				                    <select id="protocol">
+				                        <option value="ws" selected="selected">ws</option>
+				                        <option value="wss">wss</option>
+				                    </select>
+				                </td>
+				            </tr>
+				            <tr>
+				                <td>WS Hostname</td>
+				                <td><input type="text" id="hostname" value="localhost"/></td>
+				            </tr>
+				            <tr>
+				                <td>WS Port</td>
+				                <td><input type="text" id="port" value=""/></td>
+				            </tr>
+				            <tr>
+				                <td>WS Endpoint</td>
+				                <td><input type="text" id="endpoint"/></td>
+				            </tr>
+				            <tr>
+				                <td></td>
+				                <td>
+				                    <input id="btnConnect"    type="button" value="Connect"    onclick="onConnectClick()">&nbsp;&nbsp;
+				                    <input id="btnDisconnect" type="button" value="Disconnect" onclick="onDisconnectClick()" disabled="disabled">
+				                </td>
+				            </tr>
+				        </table>
+							</div>
+						</section>
+					</section>
+          <!-- Two -->
+					<section id="two" class="wrapper style1 spotlights">
+						<section>
+							<div class="content">
+								<!-- Send Message Table -->
+				        <table>
+				            <tr>
+				                <td width="200px">Message: </td>
+				                <td><input type="text" id="message"/></td>
+				            </tr>
+				            <tr>
+				                <td>
+													<input id="btnSend" type="button" value="Send" disabled="disabled" onclick="onSendClick()">
+												</td>
+				                <td>
+				                </td>
+				            </tr>
+				        </table><br/>
+				        <textarea id="incomingMsgOutput" rows="10" cols="20" disabled="disabled"></textarea>
+							</div>
+						</section>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Ho Wang Lam 2019. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
